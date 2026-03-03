@@ -1,0 +1,77 @@
+{
+  "loocv": {
+    "mean_loss": 0.44075633883476256,
+    "std_loss": 0.23339888339094642,
+    "per_fold": [
+      {
+        "fold": 1,
+        "val_loss": 0.5257955193519592
+      },
+      {
+        "fold": 2,
+        "val_loss": 0.7825940251350403
+      },
+      {
+        "fold": 3,
+        "val_loss": 0.1897067427635193
+      },
+      {
+        "fold": 4,
+        "val_loss": 0.2345714569091797
+      },
+      {
+        "fold": 5,
+        "val_loss": 0.8126834630966187
+      },
+      {
+        "fold": 6,
+        "val_loss": 0.2733302712440491
+      },
+      {
+        "fold": 7,
+        "val_loss": 0.6862192153930664
+      },
+      {
+        "fold": 8,
+        "val_loss": 0.24695032835006714
+      },
+      {
+        "fold": 9,
+        "val_loss": 0.4406849443912506
+      },
+      {
+        "fold": 10,
+        "val_loss": 0.21502742171287537
+      }
+    ],
+    "pcb_mae_mean": 2.325173397671327,
+    "die_mae_mean": 0.002619386390595647
+  },
+  "optimization": {
+    "pareto_solutions": 60,
+    "best_profile": {
+      "peak_temp_C": 244.21358265858834,
+      "tal_s": 59.260689477620765,
+      "soak_temp_C": 171.1184332890212,
+      "soak_time_s": 110.83494409738574,
+      "ramp_rate_Cps": 2.075029103075053,
+      "cooling_rate_Cps": 1.9614398456400406,
+      "t_total_s": 315.3134299999422,
+      "T_amb_C": 24.967659526724393,
+      "copper_area_fraction": 0.26330966565827735,
+      "paste_coverage_fraction": 0.02617614650858776,
+      "k_die_WmK": 130.2342107943467,
+      "k_pcb_WmK": 0.4219416832268099
+    },
+    "best_pcb_obj": 13.56394177832735,
+    "best_die_obj": 0.04514818297933875,
+    "baseline_pcb_obj": 19.321725716859806,
+    "baseline_die_obj": 0.049044606521654925
+  },
+  "model": {
+    "architecture": "ThermalDigitalTwin (shared encoder, separate PCB+DIE decoders)",
+    "in_features": 12,
+    "n_params": 2320226,
+    "loss": "MSE(PCB) + MSE(DIE) + \u03bb\u00b7Gradient(PCB) + \u03bb\u00b7Uniformity(DIE)"
+  }
+}
